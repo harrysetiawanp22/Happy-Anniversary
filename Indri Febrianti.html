@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fbfaf8; /* Beige Terang */
+        }
+        header {
+            background-color: #d4a373; /* Merah Muda Terang */
+            padding: 20px;
+            text-align: center;
+            color: #6b705c;
+            font-size: 40px;
+            font-family: "Dancing Script", cursive;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #686763; /* Abu-Abu Gelap */
+            border-bottom: 2px solid #ffe8d6; /* Krim Terang */
+        }
+        nav a {
+            text-decoration: none;
+            color: #f5f4ef; /* Putih Krem */
+            padding: 15px 20px;
+            display: block;
+            font-size: 20px;
+            font-family: "Dancing Script", cursive;
+        }
+        nav a:hover {
+            background-color: #ffe8d6; /* Krim Terang */
+            color: white;
+        }
+        .content {
+            padding: 20px;
+            display: none; /* Sembunyikan konten utama secara default */
+        }
+        .gallery {
+            display: none; /* Sembunyikan bagian ini secara default */
+        }
+        .gallery h2 {
+            text-align: center;
+            font-family: "Dancing Script", cursive;
+            font-size: 40px;
+        }
+        .gallery-images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 800px;
+        }
+        .gallery-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .gallery-item img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            margin: 0 20px;
+            border-radius: 8px;
+        }
+        .gallery-item .text {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+        .message {
+            text-align: center; /* Rata tengah untuk seluruh section */
+        }
+        .message h2 {
+            font-family: "Dancing Script", cursive;
+            font-size: 40px;
+        }
+        .message p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto; /* Agar paragraph berada di tengah */
+        }
+        footer {
+            background-color: #686763; /* Abu-Abu Gelap */
+            color: white;
+            text-align: center;
+            padding: 8px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+    </style>
+</head>
+<body>
+    <header>Hai Indri Febrianti</header>
+    <nav>
+        <a href="#" onclick="showSection('gallery')">Our Gallery</a>
+        <a href="#" onclick="showSection('message')">Message</a>
+    </nav>
+    <div class="content">
+        <section id="gallery" class="gallery">
+            <h2>Our Gallery</h2>
+            <div class="gallery-images">
+                <div class="gallery-item">
+                    <img src="C8EE3770-33DC-4869-A5FD-751C45A0B142.JPEG" alt="Foto 1">
+                    <div class="text">Ini foto kita pas aku sidang, aku happy banget bisa kelarin kuliah di waktu yang tepat dan ditambah ada kamu yang selalu temanin aku dari aku bikin proposal sampai aku luluss</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_2115.JPEG" alt="Foto 2">
+                    <div class="text">Ini foto kamu ninggalin aku ke jogja, setelah kamu pergi ke jogja aku ngerasa aku bener - bener ga bisa jauh dari kamu.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_2448.JPEG" alt="Foto 3">
+                    <div class="text">Ini foto pas aku sidang lagi wkwkwk, maap yakk masukin foto yang ini, kitaa ga banyak foto berdua, next kita foto yang bagus yaaaaaaaa..........</div>
+                </div>
+            </div>
+        </section>
+        <section id="message" class="message">
+            <h2>Message</h2>
+            <p>Selamat tanggal 6 yang ke 16 kalinya sayanggg, makasih yaa udah mau sabar sama aku sayangg, makasi juga udah tetap bertahan sama aku disini walaupun banyak masalah dan rintangan yang kita lalui sayangg, aku bangga banget punya pacar yang baik banget kaya kamu sayangg, kamu selalu sabar ngadepin sikap aku yang sering ga jelas, makasihh jugaa udah selalu mau aku repotin sayangg. sayangg aku minta maaf yaa, aku terlalu sering bikin kamu bt, kesel sama aku. aku sayangg bangett samaa kamuu, aku berharap kita bisa bertahan terus yaaa sayanggg. LOVEYOU SOMUCH SAYANGGGG. aku sengaja buatin ini buat kamu, biar kamu nya happy soalnya beberapa bulan yang kemaren aku serin lupa ucapin heheheheh</p>
+        </section>
+    </div>
+    <footer>© 2024 Harry Setiawan Putra</footer>
+    <script>
+        // Fungsi untuk menampilkan bagian yang dipilih dan menyembunyikan yang lainnya
+        function showSection(sectionId) {
+            // Sembunyikan semua bagian
+            document.querySelectorAll('.content > section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Tampilkan bagian yang dipilih
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Fungsi untuk menampilkan pesan pop-up pertama
+        function askQuestions() {
+            // Sembunyikan konten utama sampai semua pertanyaan terjawab
+            document.querySelector('.content').style.display = 'none';
+
+            // Pertanyaan pertama
+            var answer1 = prompt('Apakah kamu Indri Febrianti? (ya/tidak)');
+            if (answer1.toLowerCase() !== 'ya') {
+                // Jika jawabannya bukan 'ya', alihkan ke halaman lain atau tampilkan pesan kesalahan
+                alert('Jawaban salah! Kamu tidak bisa mengakses halaman ini.');
+                window.location.href = 'https://www.instagram.com/monsterrrrr2____/'; // Alihkan ke halaman lain
+                return; // Keluar dari fungsi
+            }
+
+            // Pertanyaan kedua
+            var answer2 = prompt('Jika kamu memilih ya, kapan kita jadian? (6 mei/5 mei)');
+            if (answer2.toLowerCase() !== '6 mei') {
+                // Jika jawabannya bukan '6 mei', alihkan ke halaman lain atau tampilkan pesan kesalahan
+                alert('Jawaban salah! Kamu tidak bisa mengakses halaman ini.');
+                window.location.href = 'https://example.com'; // Alihkan ke halaman lain
+                return; // Keluar dari fungsi
+            }
+
+            // Jika kedua jawaban benar, tampilkan konten utama
+            document.querySelector('.content').style.display = 'block';
+            showSection('gallery'); // Tampilkan bagian default (galeri)
+        }
+
+        // Panggil fungsi saat halaman dimuat
+        window.onload = function() {
+            askQuestions();
+        };
+    </script>
+</body>
+</html>
